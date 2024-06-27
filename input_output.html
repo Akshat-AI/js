@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function welcome(event) {
+        event.preventDefault();
+        let fname = document.getElementById("fstname").value
+        let lname = document.getElementById("lstname").value
+        let dob = document.getElementById("date_of_birth").value
+        demo.innerHTML = ("Hello " + fname + " " + lname)
+        demo1.innerHTML = "Your favourite language is " + document.querySelector('input[name ="fav_language"]:checked').value;
+        demo3.innerHTML ="You were born on "+dob;
+
+
+
+
+    }
+</script>
+
+<body style="background-color:lightpink;">
+    <form>
+        <fieldset>
+            <legend >Please select your prefered contact method</legend>
+            <fieldset>
+
+            <label for="fstname">First Name:</label>
+            <input type="text" id="fstname" name="fstname"><br>
+            <label for="lstname">Last Name:</label>
+            <input type="text" id="lstname" name="lstname"><br>
+        </fieldset>
+        <br>
+
+            <label>Enter your favroite language</label><br>
+            <input type="radio" id="cpp" name="fav_language" value="C++">
+            <label>C++</label><br>
+            <input type="radio" id="Java" name="fav_language" value="Java">
+            <label>Java</label><br>
+            <input type="radio" id="Python" name="fav_language" value="Python">
+            <label>Python</label>
+            <br><br>
+            <label for="date_of_birth">Enter your Date of Birth : </label>
+            <input type="date" id="date_of_birth" name="date_of_birth">
+            <button onclick="welcome(event)">Click Me!</button>
+            <h2 id="demo"></h2>
+            <h2 id="demo1"></h2>
+            <h2 id="demo3"></h2>
+        </fieldset>
+
+
+
+    </form>
+</body>
+
+</html>
