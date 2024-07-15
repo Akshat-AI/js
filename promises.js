@@ -1,5 +1,5 @@
 var checks = false
-const myPromise = new Promise(function(resolve,reject){
+const myPromise = new Promise((resolve,reject) =>{
     if (checks == true)
     {
         resolve("I completed my promise")
@@ -8,8 +8,9 @@ const myPromise = new Promise(function(resolve,reject){
         reject("I am not able to complete the promise")
     }
 })    
-    myPromise.then(function(value){
+
+    myPromise.then((value) => {
         console.log(value)
-    }).catch(function(error){
+    }).catch((error) => {
         console.log(error)
     })
